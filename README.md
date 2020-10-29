@@ -15,8 +15,8 @@ This snippet:
 - :hammer_and_pick: highly **customizable** yet very **simple**
 
 ## Demo
-- [JSfiddle](https://jsfiddle.net/giray123/y0wh7xmL/12/)
-- [Github Pages](https://giray123.github.io/javascript-autocomplete/)
+- [JSfiddle](https://jsfiddle.net/giray123/0nzvexc4/3/)
+- [Github Pages](https://giray123.github.io/javascript-autoexpandable-textarea/)
 ## Usage
 
 Add either unminified or minified JS onto your html
