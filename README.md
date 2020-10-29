@@ -65,21 +65,21 @@ var expander3 = new textAreaAutoExpander({
 })
 ```
 ## How it Works?
-Auto expanding a textarea based on user input is a tedious task. However, there is a  workaround which this snippet is using. When you initialize the snippet, it creates a copy div element of the textarea which is not possible, it then syncs all the related CSS attributes so that their width and height changes the same amount. When user types, it calculates the width/height of the hidden element and copies it to the textarea. Because of this dynamic, you can not style your textarea during expansion and expect it to continue expanding properly. You need to call `expander.refresh()` after you style your textarea so that the snippet syncs CSS parameters again.
+Auto expanding a textarea based on user input is a tedious task. However, there is a  workaround which this snippet is using. When you initialize the snippet, it creates a copy div element of the textarea which is not observable on the page, it then syncs all the related CSS attributes between the textarea and the hidden element so that their width and height changes the same amount. When user types, it calculates the width/height of the hidden element and copies it to the textarea. Because of this dynamic, you can not style your textarea during expansion and expect it to continue expanding properly. You need to call `expander.refresh()` after you style your textarea so that the snippet syncs CSS parameters again.
 
 ## Configuration
 ### Global Options
 | attribute  | type | default | description |
 | -------------       | -------- | ---- | ------------- |
 | `selector`            | string   | required | html input element query selector (`document.querySelector(selector)`)
-| `safetyMargin`        | integer  | `100`    | minimum distance between text and the border before expanding starts
+| `safetyMargin`        | integer  | `100`    | minimum pixel distance between text and the border before expanding starts
 | `autoHeight`          | boolean  | `true`   | whether to expand vertically
 | `autoWidth`           | boolean  | `true`   | whether to expand horizontally
 ## Methods
 | attribute  | description |
 | -----------| ----------- |
 | `state()`  | returns information about the current state
-| `refresh()`| syncs fontFamily, whiteSpace, fontSize, lineHeight between the textarea and the hidden element. You can `expander.refresh({fontSize: 20, lineHeight: 20})` to change fontSize and lineHeight directly
+| `refresh()`| syncs fontFamily, whiteSpace, fontSize, lineHeight between the textarea and the hidden element. You can use `expander.refresh({fontSize: 20, lineHeight: 20})` command to change fontSize and lineHeight directly with this method
 
 
 ## LICENSE
