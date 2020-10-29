@@ -1,0 +1,29 @@
+{
+  "name": "javascript-autoexpandable-textarea",
+  "version": "1.0.0",
+  "description": "Auto-expandable Textarea snippet for HTML textarea fields built with native javascript",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giray123/javascript-autoexpandable-textarea.git"
+  },
+  "keywords": [
+    "javascript",
+    "textarea",
+    "expandable",
+    "autogrowing"
+  ],
+  "author": "giray songul",
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-terser": "^1.4.0",
+    "gulp-uglify": "^3.0.2"
+  }
+}

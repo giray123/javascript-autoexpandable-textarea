@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto-expandable Textarea</title>
+    <style>
+        body{
+            font-family: sans-serif;
+            text-align: center;
+            padding-bottom: 400px;
+        }
+        #main{
+            width: 100%;
+            text-align: left;
+        }
+        h1{
+            margin-top: 60px;
+        }
+        h2{
+            margin-top: 50px;
+        }
+        @media screen and (min-width: 768px) {
+            #main{
+                width: 40%;
+                margin: auto;
+            }
+        }
+        .textarea_styled{
+            min-width: 300px;
+            min-height: 300px;
+            transition: all .25s ease-out;
+            color: #4a5568;
+            padding: 10px 20px 10px 20px;
+            line-height: 1.5;
+            border-width: 1px;
+            border-radius: .5rem;
+            border-color: transparent;
+            background-color: #edf2f7;
+            font-family: sans-serif;
+            font-size: 15px;
+        }
+        .textarea_styled:focus{
+            outline: none;
+            background-color: white;
+            border: 1px solid #edf2f7;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h1>Auto-expandable Textarea for Native Javascript</h1>
+        <p>Auto-expandable Textarea snippet for HTML textarea fields build with native javascript and no dependencies</p>
+        <p>
+            This snippet:
+            <ul>
+                <li>is built with <b>native javascript</b></li>
+                <li>requires <b>no dependencies</b></li>
+                <li>highy <b>customizable</b> yet very <b>simple</b></li>
+            </ul>
+
+        </p>
+
+        <h2>Auto-expandable Textarea Both Vertically and Horizontally</h2>
+        <textarea id="textarea_expand_both_ways" class="textarea_styled" placeholder="Type your message..."></textarea>
+
+        <h2>Auto-expandable Textarea Vertically</h2>
+        <textarea id="textarea_expand_vertically" class="textarea_styled" placeholder="Type your message..."></textarea>
+
+        <h2>Auto-expandable Textarea Horizontally</h2>
+        <textarea id="textarea_expand_horizontally" class="textarea_styled" placeholder="Type your message..."></textarea>
+    </div>
+    <script src="js/textarea-expander.js"></script>
+    <script>
+        // Auto-expandable Textarea Both Vertically and Horizontally
+        var expander1 = new textAreaAutoExpander('#textarea_expand_both_ways')
+
+        // Auto-expandable Textarea Vertically
+        var expander2 = new textAreaAutoExpander({
+            selector: '#textarea_expand_vertically',
+            safetyMargin: 200,
+            autoHeight: true,
+            autoWidth: false
+        })
+
+        // Auto-expandable Textarea Horizontally
+        var expander3 = new textAreaAutoExpander({
+            selector: '#textarea_expand_horizontally',
+            safetyMargin: 200,
+            autoHeight: false,
+            autoWidth: true
+        })
+    </script>
+</body>
+</html>
